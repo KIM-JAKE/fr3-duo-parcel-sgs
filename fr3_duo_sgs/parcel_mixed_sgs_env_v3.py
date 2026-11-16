@@ -24,7 +24,7 @@ class RemoteSampler(SuccessGuidedSampler):
    for i in range(len(self.owner.connections)):self.owner._receive(i)
 class MixedParcelSGSEnv:
  num_actions=54
- def __init__(self,index,args,num_envs,rank=0,episode_steps=256):
+ def __init__(self,index,args,num_envs,rank=0,episode_steps=160):
   self.args=args;self.index=pathlib.Path(index);self.num_envs=num_envs;self.rank=rank;self.device=args.device;self.max_episode_length=episode_steps;self.children=[];self.connections=[];self.logs=[];self.events=[];self.geometry_seen=set();self.geometry_id=-1;self.active_steps=0;self.total_steps=0
   self.cfg=dict(task='FR3 Duo mixed parcels',obs='native 256D privileged teacher',sampler='SGS within fixed 50/50 box/mailer strata, homogeneous geometry per independent simulator',physics='Native VBD40 dt.002 two substeps, full deformable mesh/material/self and vertex/edge/face contacts. Sorted exact contact traversal. Allocation overflow fatal.')
   self.sizes=[args.box_envs]+[args.mailer_envs]*args.mailer_shards;self.kinds=['box']+['mailer']*args.mailer_shards;assert sum(self.sizes)==num_envs and args.box_envs==args.mailer_envs*args.mailer_shards

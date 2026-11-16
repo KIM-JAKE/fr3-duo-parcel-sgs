@@ -1,6 +1,6 @@
 """Portable supervised launcher; run this process under tmux."""
 import pathlib,subprocess,os,argparse,json,time,sys,signal,hashlib
-root=pathlib.Path(__file__).resolve().parents[1];p=argparse.ArgumentParser();p.add_argument('--gpus',default='0,1,2,3');p.add_argument('--mailer-envs',type=int,default=4096);p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('runs/sgs'));p.add_argument('--iterations',type=int,default=10000);p.add_argument('--horizon',type=int,default=32);p.add_argument('--episode-steps',type=int,default=256);p.add_argument('--diagnostic',action='store_true');a=p.parse_args();a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=True);gpus=a.gpus.split(',');n=a.mailer_envs;assert n>0 and len(set(gpus))==len(gpus);child=None
+root=pathlib.Path(__file__).resolve().parents[1];p=argparse.ArgumentParser();p.add_argument('--gpus',default='0,1,2,3');p.add_argument('--mailer-envs',type=int,default=4096);p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('runs/sgs'));p.add_argument('--iterations',type=int,default=10000);p.add_argument('--horizon',type=int,default=8);p.add_argument('--episode-steps',type=int,default=160);p.add_argument('--diagnostic',action='store_true');a=p.parse_args();a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=True);gpus=a.gpus.split(',');n=a.mailer_envs;assert n>0 and len(set(gpus))==len(gpus);child=None
 import fcntl
 lock=(a.output/'supervisor.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 def atomic(d):
@@ -16,10 +16,13 @@ cmd=[sys.executable,'-u','-m','torch.distributed.run','--standalone','--nproc-pe
 if a.diagnostic:cmd+=['--diagnostic']
 resume=checkpoint()
 if resume:cmd+=['--resume',str(resume)]
-env=dict(os.environ,CUDA_VISIBLE_DEVICES=a.gpus,OMP_NUM_THREADS='2',MUJOCO_GL='osmesa',PYOPENGL_PLATFORM='osmesa',WARP_CACHE_PATH=str(root/'.cache/warp'))
+env=dict(os.environ,CUDA_VISIBLE_DEVICES=a.gpus,OMP_NUM_THREADS='2',MUJOCO_GL='disable',WARP_CACHE_PATH=str(root/'.cache/warp'))
 def stop(sig,frame):raise KeyboardInterrupt
 signal.signal(signal.SIGTERM,stop)
 try:
+ # Preserve prior statuses without interpreting a previous attempt as current health.
+ archived=a.output/'status_archive'/str(time.time_ns());archived.mkdir(parents=True)
+ for old in a.output.glob('rank_*_status.json'):old.rename(archived/old.name)
  with (a.output/'train.log').open('a') as log:
   child=subprocess.Popen(cmd,cwd=root,env=env,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
   (a.output/'launch.json').write_text(json.dumps(dict(command=cmd,child_pid=child.pid,physical_gpus=gpus,envs_per_gpu=8*n,ng_free_target=.25,resume=str(resume) if resume else None),indent=2))

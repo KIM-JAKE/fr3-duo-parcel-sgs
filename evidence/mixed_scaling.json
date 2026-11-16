@@ -1,0 +1,493 @@
+{
+  "state": "pass",
+  "results": [
+    {
+      "state": "pass",
+      "utc": "2026-11-16T07:09:15.270819+00:00",
+      "elapsed_s": 106.28222393989563,
+      "peak_gpu_mib": 23980.0,
+      "aggregate": {
+        "utc": "2026-11-16T07:09:04.932704+00:00",
+        "gpu_memory": {
+          "used_mib": 23980.0,
+          "free_mib": 158653.0,
+          "total_mib": 183359.0,
+          "utilization_pct": 0.0
+        },
+        "workers": [
+          {
+            "state": "measured_holding",
+            "pid": 1618313,
+            "utc": "2026-11-16T07:08:23.760360+00:00",
+            "elapsed_s": 45.9439172744751,
+            "num_envs": 2048,
+            "kind": "box",
+            "finite": true,
+            "process_gpu_used_mib": 4778.0,
+            "mean_physics_step_s": 0.00719030403221647,
+            "physics_env_steps_per_s": 284828.01155887806,
+            "contact_peaks": {}
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618315,
+            "utc": "2026-11-16T07:08:55.120032+00:00",
+            "elapsed_s": 79.3531105518341,
+            "num_envs": 512,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 4786.0,
+            "mean_physics_step_s": 1.3098609416435163,
+            "physics_env_steps_per_s": 390.88118724845737,
+            "contact_peaks": {
+              "soft": 614525,
+              "rigid": 9728,
+              "body_particle": 863,
+              "body_body": 10
+            }
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618318,
+            "utc": "2026-11-16T07:08:52.109307+00:00",
+            "elapsed_s": 75.113365650177,
+            "num_envs": 512,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 4786.0,
+            "mean_physics_step_s": 1.1860823795820277,
+            "physics_env_steps_per_s": 431.67322001733766,
+            "contact_peaks": {
+              "soft": 1266996,
+              "rigid": 11713,
+              "body_particle": 1346,
+              "body_body": 10
+            }
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618316,
+            "utc": "2026-11-16T07:09:00.727743+00:00",
+            "elapsed_s": 83.99229049682617,
+            "num_envs": 512,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 4786.0,
+            "mean_physics_step_s": 1.5482594346782814,
+            "physics_env_steps_per_s": 330.6939318644555,
+            "contact_peaks": {
+              "soft": 982354,
+              "rigid": 39924,
+              "body_particle": 860,
+              "body_body": 62
+            }
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618317,
+            "utc": "2026-11-16T07:08:58.529734+00:00",
+            "elapsed_s": 82.22740387916565,
+            "num_envs": 512,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 4786.0,
+            "mean_physics_step_s": 1.454817266125853,
+            "physics_env_steps_per_s": 351.9342338872874,
+            "contact_peaks": {
+              "soft": 1416609,
+              "rigid": 19968,
+              "body_particle": 1195,
+              "body_body": 10
+            }
+          }
+        ],
+        "process_gpu_mib": 23922.0,
+        "box_envs": 2048,
+        "mailer_envs": 2048,
+        "total_envs": 4096,
+        "scope": "All five independent native simulator processes remain resident after simultaneous measured stepping. Includes native robot/contact physics, actor/critic Adam allocation, per-shard 32-step rollout buffers. Not a shared PPO optimizer update or full reset distribution validation."
+      },
+      "final_workers": [
+        {
+          "state": "complete",
+          "pid": 1618313,
+          "utc": "2026-11-16T07:09:05.403917+00:00",
+          "elapsed_s": 87.58746981620789,
+          "num_envs": 2048,
+          "kind": "box",
+          "process_gpu_used_mib": 4778.0,
+          "finite": true,
+          "mean_physics_step_s": 0.00719030403221647,
+          "physics_env_steps_per_s": 284828.01155887806,
+          "gpu_used_mib": 23979.125,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 150.3994140625,
+          "rollout_buffer_mib": 105.75,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000022_G_box_two_hand/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {},
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618315,
+          "utc": "2026-11-16T07:09:05.489384+00:00",
+          "elapsed_s": 89.72241759300232,
+          "num_envs": 512,
+          "kind": "mailer",
+          "process_gpu_used_mib": 4786.0,
+          "finite": true,
+          "mean_physics_step_s": 1.3098609416435163,
+          "physics_env_steps_per_s": 390.88118724845737,
+          "gpu_used_mib": 23979.125,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 52.85595703125,
+          "rollout_buffer_mib": 26.4375,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v19_bank/survivors/2000016_G_mailer_one_hand/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 614525,
+            "rigid": 9728,
+            "body_particle": 863,
+            "body_body": 10
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618316,
+          "utc": "2026-11-16T07:09:05.394658+00:00",
+          "elapsed_s": 88.65922260284424,
+          "num_envs": 512,
+          "kind": "mailer",
+          "process_gpu_used_mib": 4786.0,
+          "finite": true,
+          "mean_physics_step_s": 1.5482594346782814,
+          "physics_env_steps_per_s": 330.6939318644555,
+          "gpu_used_mib": 23979.125,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 52.85595703125,
+          "rollout_buffer_mib": 26.4375,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000023_G_mailer_two_hand/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 982354,
+            "rigid": 39924,
+            "body_particle": 860,
+            "body_body": 62
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618317,
+          "utc": "2026-11-16T07:09:05.418809+00:00",
+          "elapsed_s": 89.11646223068237,
+          "num_envs": 512,
+          "kind": "mailer",
+          "process_gpu_used_mib": 4786.0,
+          "finite": true,
+          "mean_physics_step_s": 1.454817266125853,
+          "physics_env_steps_per_s": 351.9342338872874,
+          "gpu_used_mib": 23979.125,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 52.85595703125,
+          "rollout_buffer_mib": 26.4375,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000016_NO_mailer_one_touch/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 1416609,
+            "rigid": 19968,
+            "body_particle": 1195,
+            "body_body": 10
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618318,
+          "utc": "2026-11-16T07:09:05.489409+00:00",
+          "elapsed_s": 88.49346876144409,
+          "num_envs": 512,
+          "kind": "mailer",
+          "process_gpu_used_mib": 4786.0,
+          "finite": true,
+          "mean_physics_step_s": 1.1860823795820277,
+          "physics_env_steps_per_s": 431.67322001733766,
+          "gpu_used_mib": 23979.125,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 52.85595703125,
+          "rollout_buffer_mib": 26.4375,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000019_NG_mailer/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 1266996,
+            "rigid": 11713,
+            "body_particle": 1346,
+            "body_body": 10
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        }
+      ]
+    },
+    {
+      "state": "pass",
+      "utc": "2026-11-16T07:10:12.103789+00:00",
+      "elapsed_s": 163.16028594970703,
+      "peak_gpu_mib": 42890.0,
+      "aggregate": {
+        "utc": "2026-11-16T07:10:01.759873+00:00",
+        "gpu_memory": {
+          "used_mib": 42890.0,
+          "free_mib": 139743.0,
+          "total_mib": 183359.0,
+          "utilization_pct": 0.0
+        },
+        "workers": [
+          {
+            "state": "measured_holding",
+            "pid": 1618307,
+            "utc": "2026-11-16T07:08:44.837949+00:00",
+            "elapsed_s": 68.28701210021973,
+            "num_envs": 4096,
+            "kind": "box",
+            "finite": true,
+            "process_gpu_used_mib": 8624.0,
+            "mean_physics_step_s": 0.01816654996946454,
+            "physics_env_steps_per_s": 225469.33825546457,
+            "contact_peaks": {}
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618308,
+            "utc": "2026-11-16T07:09:45.966856+00:00",
+            "elapsed_s": 131.16462349891663,
+            "num_envs": 1024,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 8550.0,
+            "mean_physics_step_s": 2.5637999828904867,
+            "physics_env_steps_per_s": 399.4071327067874,
+            "contact_peaks": {
+              "soft": 1227192,
+              "rigid": 19456,
+              "body_particle": 864,
+              "body_body": 10
+            }
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618311,
+            "utc": "2026-11-16T07:09:40.805550+00:00",
+            "elapsed_s": 122.95731592178345,
+            "num_envs": 1024,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 8550.0,
+            "mean_physics_step_s": 2.347966808670511,
+            "physics_env_steps_per_s": 436.1220082918546,
+            "contact_peaks": {
+              "soft": 2534196,
+              "rigid": 23407,
+              "body_particle": 1346,
+              "body_body": 10
+            }
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618309,
+            "utc": "2026-11-16T07:09:56.660464+00:00",
+            "elapsed_s": 140.49402117729187,
+            "num_envs": 1024,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 8550.0,
+            "mean_physics_step_s": 3.004634028611084,
+            "physics_env_steps_per_s": 340.8068970294369,
+            "contact_peaks": {
+              "soft": 1965165,
+              "rigid": 79784,
+              "body_particle": 861,
+              "body_body": 67
+            }
+          },
+          {
+            "state": "measured_holding",
+            "pid": 1618310,
+            "utc": "2026-11-16T07:09:51.901724+00:00",
+            "elapsed_s": 134.41682171821594,
+            "num_envs": 1024,
+            "kind": "mailer",
+            "finite": true,
+            "process_gpu_used_mib": 8550.0,
+            "mean_physics_step_s": 2.8128313164537153,
+            "physics_env_steps_per_s": 364.04600375788294,
+            "contact_peaks": {
+              "soft": 2831903,
+              "rigid": 39936,
+              "body_particle": 1194,
+              "body_body": 10
+            }
+          }
+        ],
+        "process_gpu_mib": 42824.0,
+        "box_envs": 4096,
+        "mailer_envs": 4096,
+        "total_envs": 8192,
+        "scope": "All five independent native simulator processes remain resident after simultaneous measured stepping. Includes native robot/contact physics, actor/critic Adam allocation, per-shard 32-step rollout buffers. Not a shared PPO optimizer update or full reset distribution validation."
+      },
+      "final_workers": [
+        {
+          "state": "complete",
+          "pid": 1618307,
+          "utc": "2026-11-16T07:10:02.300963+00:00",
+          "elapsed_s": 145.7500433921814,
+          "num_envs": 4096,
+          "kind": "box",
+          "process_gpu_used_mib": 8624.0,
+          "finite": true,
+          "mean_physics_step_s": 0.01816654996946454,
+          "physics_env_steps_per_s": 225469.33825546457,
+          "gpu_used_mib": 42889.1875,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 282.2353515625,
+          "rollout_buffer_mib": 211.5,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000022_G_box_two_hand/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {},
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618308,
+          "utc": "2026-11-16T07:10:02.375212+00:00",
+          "elapsed_s": 147.57296633720398,
+          "num_envs": 1024,
+          "kind": "mailer",
+          "process_gpu_used_mib": 8550.0,
+          "finite": true,
+          "mean_physics_step_s": 2.5637999828904867,
+          "physics_env_steps_per_s": 399.4071327067874,
+          "gpu_used_mib": 42889.1875,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 85.28466796875,
+          "rollout_buffer_mib": 52.875,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v19_bank/survivors/2000016_G_mailer_one_hand/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 1227192,
+            "rigid": 19456,
+            "body_particle": 864,
+            "body_body": 10
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618309,
+          "utc": "2026-11-16T07:10:02.370326+00:00",
+          "elapsed_s": 146.20387840270996,
+          "num_envs": 1024,
+          "kind": "mailer",
+          "process_gpu_used_mib": 8550.0,
+          "finite": true,
+          "mean_physics_step_s": 3.004634028611084,
+          "physics_env_steps_per_s": 340.8068970294369,
+          "gpu_used_mib": 42889.1875,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 85.28466796875,
+          "rollout_buffer_mib": 52.875,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000023_G_mailer_two_hand/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 1965165,
+            "rigid": 79784,
+            "body_particle": 861,
+            "body_body": 67
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618310,
+          "utc": "2026-11-16T07:10:02.353277+00:00",
+          "elapsed_s": 144.86838746070862,
+          "num_envs": 1024,
+          "kind": "mailer",
+          "process_gpu_used_mib": 8550.0,
+          "finite": true,
+          "mean_physics_step_s": 2.8128313164537153,
+          "physics_env_steps_per_s": 364.04600375788294,
+          "gpu_used_mib": 42889.1875,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 85.28466796875,
+          "rollout_buffer_mib": 52.875,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000016_NO_mailer_one_touch/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 2831903,
+            "rigid": 39936,
+            "body_particle": 1194,
+            "body_body": 10
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        },
+        {
+          "state": "complete",
+          "pid": 1618311,
+          "utc": "2026-11-16T07:10:02.295872+00:00",
+          "elapsed_s": 144.4476296901703,
+          "num_envs": 1024,
+          "kind": "mailer",
+          "process_gpu_used_mib": 8550.0,
+          "finite": true,
+          "mean_physics_step_s": 2.347966808670511,
+          "physics_env_steps_per_s": 436.1220082918546,
+          "gpu_used_mib": 42889.1875,
+          "gpu_total_mib": 182631.625,
+          "torch_peak_allocated_mib": 85.28466796875,
+          "rollout_buffer_mib": 52.875,
+          "hardware": "NVIDIA B200",
+          "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000019_NG_mailer/batch_00000.npz",
+          "same_geometry_copies": true,
+          "contact_peaks": {
+            "soft": 2534196,
+            "rigid": 23407,
+            "body_particle": 1346,
+            "body_body": 10
+          },
+          "soft_cap_per_env": 8192,
+          "body_particle_cap": 4096,
+          "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+        }
+      ]
+    }
+  ]
+}

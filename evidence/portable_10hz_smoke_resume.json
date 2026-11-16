@@ -1,0 +1,55 @@
+{
+  "state": "pass",
+  "verified_unix_s": 1794814084.3274038,
+  "scope": "Real native 4-GPU diagnostic,32 env/rank128 total,20 native workers,10Hz,2-step rollout,4-step diagnostic timeout; default160-step timeout validated separately with synthetic dynamics. Not a32k/GPU timing/capacity rerun or parcel manipulation success result.",
+  "ranks": [
+    {
+      "rank": 0,
+      "optimizer_steps_before": 16,
+      "optimizer_steps_after": 32,
+      "actor_tensors_changed": 9,
+      "checkpoint_sha256": "9192c81527c4968dfd351018a2eaff80205afa1e321ddd1217be1d50c31d14b1",
+      "worker_rng_states": 5
+    },
+    {
+      "rank": 1,
+      "optimizer_steps_before": 16,
+      "optimizer_steps_after": 32,
+      "actor_tensors_changed": 9,
+      "checkpoint_sha256": "7364ed33ea3183efd6a35d0c50ca3a1319dd571b254924e815fec6180f12db02",
+      "worker_rng_states": 5
+    },
+    {
+      "rank": 2,
+      "optimizer_steps_before": 16,
+      "optimizer_steps_after": 32,
+      "actor_tensors_changed": 9,
+      "checkpoint_sha256": "03d3be24034f22021864b1d7b0ae82dfc4af3acb27a4035eb907460bd8f3214b",
+      "worker_rng_states": 5
+    },
+    {
+      "rank": 3,
+      "optimizer_steps_before": 16,
+      "optimizer_steps_after": 32,
+      "actor_tensors_changed": 9,
+      "checkpoint_sha256": "053138ace684ce64601701dd80c9d7c425cf88eacfbf34ad5adcbef0e932445c",
+      "worker_rng_states": 5
+    }
+  ],
+  "timing": 1,
+  "shared_sgs_history_equal": true,
+  "source_hashes": {
+    "train_mixed_sgs_ppo_v3.py": "b3df8589608ed1e4c42a4c0c467d8caf571a14020601442a4b8d05d745e2e50d",
+    "parcel_mixed_sgs_env_v3.py": "9352b50a3e34732dab5d6e6d048252e4833e0a243b34050e83b9ada1b1f20248",
+    "parcel_sgs_rpc_worker_v3.py": "d86a1ea4250cbf17345326a791ca62bbb455d3622deff6072accd2a39741d791",
+    "parcel_fast_scene_v3.py": "b4214e1a38ec7cfa18652fda5450c817fb46c57814d813e9b8806b8ecc658a8e",
+    "sorted_contact_vbd_v1.py": "cdcd955346124aa72d815580237364ad2963ec47d88b7e16fe3aff6657f0fe89",
+    "parcel_sgs_env.py": "5e5ef0010d80fd2cae0f943281ef8e9638516c8e09d3e2713688fee1bd8ad4eb",
+    "parcel_native_scene.py": "2df6bd62a0e6bac8b4b39fd1b847959dab343565293f65a7bb9b7187bf9f7ff1",
+    "parcel_rl_math.py": "d4f2cff991b10649738cb87225cee4f1513182dd53f22ca9c413f8013d6dd514",
+    "sgs_sampler.py": "cade1b683c2d34aa7066e8898225084d72f29832851cb4e9348f7e5027f95f95",
+    "control_timing.py": "0168d3fb78dd6be49ac2ff497d0f551badff3a0e346106161d687a29cffef42f"
+  },
+  "run_output": "/home/jovyan/data-1/jake/parcel_sgs_release_20261116/code/runs/portable_smoke_10hz",
+  "tmux_session": "parcel_release_10hz_smoke_retry_20261116"
+}

@@ -1,6 +1,6 @@
 """Download immutable data, verify bytes, and relocate paths for this checkout."""
 import argparse,pathlib,json,hashlib,shutil,xml.etree.ElementTree as ET
-p=argparse.ArgumentParser();p.add_argument('--data',type=pathlib.Path,default=pathlib.Path('data'));p.add_argument('--revision',default='e6c988ada510f564acc923adbd3fe02df2632243');p.add_argument('--local-only',action='store_true');a=p.parse_args();root=pathlib.Path(__file__).resolve().parents[1];data=a.data.resolve();data.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--data',type=pathlib.Path,default=pathlib.Path('data'));p.add_argument('--revision',default='57561a95da538590bca3dc83d63c108f67eef43f');p.add_argument('--local-only',action='store_true');a=p.parse_args();root=pathlib.Path(__file__).resolve().parents[1];data=a.data.resolve();data.mkdir(parents=True,exist_ok=True)
 if not a.local_only:
  from huggingface_hub import snapshot_download
  snapshot_download('jaeikkim/fr3-duo-parcel-resets-200k',repo_type='dataset',revision=a.revision,local_dir=data)

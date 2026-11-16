@@ -1,12 +1,51 @@
 {
   "dataset_repo": "jaeikkim/fr3-duo-parcel-resets-200k",
-  "dataset_revision": "e6c988ada510f564acc923adbd3fe02df2632243",
+  "dataset_revision": "57561a95da538590bca3dc83d63c108f67eef43f",
   "upstream_isaaclab_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
   "ng_free_target": 0.25,
   "changed_from_original": [
     "NG weights balanced per kind using no-action flags",
     "simulator child uses current Python executable",
-    "portable supervised launcher and dataset path relocation"
+    "portable supervised launcher and dataset path relocation",
+    "Global rolling per-reset/per-kind success rates and NG free/nonfree reporting",
+    "Default 32k/GPU retained with horizon8; shorter rollout cadence",
+    "Headless teacher disables optional MuJoCo GL; prior attempt statuses archived on resume"
   ],
-  "physics_changed": false
+  "physics_changed": false,
+  "timing": {
+    "control_hz": 10,
+    "episode_steps": 160,
+    "episode_duration_s": 16,
+    "physics_dt_s": 0.002,
+    "internal_substeps": 2,
+    "physics_calls_per_action": 50,
+    "audit_hz": 50,
+    "reference_interpolated": true,
+    "source_url": "https://github.com/UW-Lab/UWLab/blob/main/source/uwlab_tasks/uwlab_tasks/manager_based/manipulation/omnireset/config/ur5e_robotiq_2f85/rl_state_cfg.py#L635-L639"
+  },
+  "controller_timing_changed": true,
+  "portable_10hz_smoke_and_resume": "pass",
+  "current_source_sha256": {
+    "fr3_duo_sgs/batched_reset_audit.py": "53730a82bfad76f5432bf91f1b275fac629567ff819c635758178085e866c162",
+    "fr3_duo_sgs/benchmark_portable_scaling_v1.py": "29f69baf533f3f60d36140ded14227ab9054effbb7bcc1dbc3adf7d971c641be",
+    "fr3_duo_sgs/control_timing.py": "0168d3fb78dd6be49ac2ff497d0f551badff3a0e346106161d687a29cffef42f",
+    "fr3_duo_sgs/exact_topology_cache_v1.py": "17f85f7b7f84f304c118a56825c0aaa460a77a6adacdf4e7fb82c78c1f5d48c8",
+    "fr3_duo_sgs/mailer_enclosure_audit.py": "902bec2b3a28783669396b7bfbb449b169903cdb1750cd8669faf45912416840",
+    "fr3_duo_sgs/mailer_surface.py": "d0e8af916f526011cef9818ab05068e5fd4aaf20a340c3f3bebd8d5922922d31",
+    "fr3_duo_sgs/newton_cell_cfg.py": "f9d3f05c0173addb894fd627e2c9da969d15dec54d684454cebc7972166f948c",
+    "fr3_duo_sgs/parcel_capacity_shard_fast_v1.py": "936d6eaa356aeb95559847eff8c0aa22339e34894b9c9dd359817e6261617971",
+    "fr3_duo_sgs/parcel_fast_scene_v3.py": "b4214e1a38ec7cfa18652fda5450c817fb46c57814d813e9b8806b8ecc658a8e",
+    "fr3_duo_sgs/parcel_kernel_profile_fast_v3.py": "cc9b93050dc65b40064e3e864266a62bcdc624f085c80333cca4d37b181b1057",
+    "fr3_duo_sgs/parcel_mixed_sgs_env_v3.py": "9352b50a3e34732dab5d6e6d048252e4833e0a243b34050e83b9ada1b1f20248",
+    "fr3_duo_sgs/parcel_native_scene.py": "2df6bd62a0e6bac8b4b39fd1b847959dab343565293f65a7bb9b7187bf9f7ff1",
+    "fr3_duo_sgs/parcel_rl_math.py": "d4f2cff991b10649738cb87225cee4f1513182dd53f22ca9c413f8013d6dd514",
+    "fr3_duo_sgs/parcel_sgs_env.py": "5e5ef0010d80fd2cae0f943281ef8e9638516c8e09d3e2713688fee1bd8ad4eb",
+    "fr3_duo_sgs/parcel_sgs_rpc_worker_v3.py": "d86a1ea4250cbf17345326a791ca62bbb455d3622deff6072accd2a39741d791",
+    "fr3_duo_sgs/scaled_reset_io.py": "9c75f2739eb1e7561bd2145f5bee279b46a3233baa6a681b6254f7e854a0ab4b",
+    "fr3_duo_sgs/sgs_sampler.py": "cade1b683c2d34aa7066e8898225084d72f29832851cb4e9348f7e5027f95f95",
+    "fr3_duo_sgs/sorted_contact_vbd_v1.py": "cdcd955346124aa72d815580237364ad2963ec47d88b7e16fe3aff6657f0fe89",
+    "fr3_duo_sgs/specialized_face_contacts_v3.py": "6156e84745dd5b004f7ec9556bf3aa7e1a6543c3383d03f10a110935cc5548e0",
+    "fr3_duo_sgs/task_success.py": "5a045a0ff119c93e186849e69b42c3d97884298d8de8ee29bc4221290415ae43",
+    "fr3_duo_sgs/train_mixed_sgs_ppo_v3.py": "b3df8589608ed1e4c42a4c0c467d8caf571a14020601442a4b8d05d745e2e50d"
+  }
 }

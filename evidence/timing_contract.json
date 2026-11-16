@@ -1,0 +1,12 @@
+{
+  "state": "pass",
+  "scope": "synthetic dynamics, actual ParcelSGSEnv.step control bookkeeping",
+  "control_hz": 10,
+  "episode_steps": 160,
+  "episode_duration_s": 16,
+  "physics_calls_per_action": 50,
+  "physics_dt_s": 0.002,
+  "success_failure_audit_hz": 50,
+  "success_hold_audit_steps": 3,
+  "early_terminal_latched_once": true
+}

@@ -2,7 +2,7 @@
 
 All 200k configurations remain eligible. A geometry is drawn by its total SGS
 weight, then configurations conditional on it. Worlds run synchronous episodes
-(max 5.12s); terminated worlds enter an absorbing zero-reward state until the
+(default max16s); terminated worlds enter an absorbing zero-reward state until the
 batch ends. The next geometry rebuilds the native scene. This preserves exact
 reset geometry/materials and native solvers, but is explicitly NOT the paper's
 independent per-world global resampling protocol. Report active and total steps.
@@ -20,10 +20,11 @@ from parcel_native_scene import configuration
 from parcel_rl_math import rotate,geometry,shaped_reward
 from task_success import C,TOP_Z,SIGNS
 from sgs_sampler import SuccessGuidedSampler
+from control_timing import POLICY_DT_S,PHYSICS_DT_S,CONTROL_DECIMATION,AUDIT_DECIMATION,SUCCESS_AUDIT_STEPS,EPISODE_STEPS
 
 class ParcelSGSEnv:
  num_actions=54
- def __init__(self,index,args,num_envs,rank=0,episode_steps=256):
+ def __init__(self,index,args,num_envs,rank=0,episode_steps=EPISODE_STEPS):
   self.index=pathlib.Path(index);self.manifest=json.loads((self.index/'manifest.json').read_text());f=np.load(self.index/'configurations.npz',allow_pickle=False);self.rows={k:f[k].copy() for k in f.files};f.close();self.args=args;self.num_envs=num_envs;self.device=args.device;self.rank=rank;self.max_episode_length=episode_steps;self.episode_length_buf=torch.zeros(num_envs,device=self.device,dtype=torch.long);self.sampler=SuccessGuidedSampler(self.rows['geometry_id'],seed=3100+rank);self.events=[];self.cache=OrderedDict();self.context=None;self.block=0;self.calls=0;self.active_steps=0;self.total_steps=0;self.current_ids=None;self.cfg=dict(task='FR3 Duo parcel',obs='privileged teacher 256D; not RGB',sampler='SGS kernel, geometry-batched synchronous episode adaptation',reward='terminal100/fail1 + SGS regularizers + label/distance potential shaping',episode_steps=episode_steps)
   with np.load(self.index/'ng_free_flags.npz',allow_pickle=False) as flags:free_success=flags['free_success'].copy()
   kinds=np.array([self.manifest['geometries'][int(g)]['kind'] for g in self.rows['geometry_id']])
@@ -95,23 +96,43 @@ class ParcelSGSEnv:
  def step(self,actions):
   self.calls+=1
   if not self.active.any() or self.block_step>=self.max_episode_length:self._new_block()
-  previous_active=self.active.clone();old=self.potential;prev=self.previous_actions.clone();a=actions.clamp(-1,1);a=torch.where(self.active[:,None],a,torch.zeros_like(a));self.reference=(self.reference+a*self.speed*.02).clamp(self.limits[:,0]+.005,self.limits[:,1]-.005);self.target=self.reference+self.bias
-  for _ in range(10):
+  previous_active=self.active.clone();old=self.potential;prev=self.previous_actions.clone()
+  a=actions.clamp(-1,1);a=torch.where(self.active[:,None],a,torch.zeros_like(a))
+  start_reference=self.reference.clone()
+  end_reference=(start_reference+a*self.speed*POLICY_DT_S).clamp(self.limits[:,0]+.005,self.limits[:,1]-.005)
+  success=torch.zeros_like(self.active);failure=torch.zeros_like(self.active)
+  self.previous_actions=a;self.episode_length_buf+=previous_active.long();self.block_step+=1
+  for substep in range(CONTROL_DECIMATION):
+   # Joint-velocity action: interpolate the reference at native physics rate,
+   # avoiding a five-times larger instantaneous joint-position jump at10Hz.
+   interpolated=start_reference+(end_reference-start_reference)*((substep+1)/CONTROL_DECIMATION)
+   self.reference=torch.where(self.active[:,None],interpolated,self.reference)
+   self.target=self.reference+self.bias
    command=self.target+self.robot.data.gravity_compensation_forces.torch/self.kp
    self.robot.actuators.target_command.set_position_index(value=command);self.scene.write_data_to_sim();self.sim.step()
    if self.soft:
     state=NewtonManager.get_state_0();newton.eval_ik(self.model,state,state.joint_q,state.joint_qd)
-   self.scene.update(.002)
-  self.previous_actions=a;self.episode_length_buf+=self.active.long();self.block_step+=1;obs,m=self._observe()
-  finite=torch.isfinite(obs['policy']).all(1)&torch.isfinite(m['q']).all(1)&torch.isfinite(m['qd']).all(1)
-  if not finite.all():raise RuntimeError('Nonfinite native policy rollout; stop and preserve checkpoint')
-  failure=(m['qd'].abs()>2*self.speed).any(1)|(m['lo'][:,2]<.12)|(m['hi'][:,2]>1.5)|(m['lo'][:,0]<.12)|(m['hi'][:,0]>1.4)|(m['lo'][:,1]<-1.25)|(m['hi'][:,1]>1.25)
-  failure|=self._station_failure()
-  self.success_streak=torch.where(m['success'],self.success_streak+1,torch.zeros_like(self.success_streak));success=(self.success_streak>=3)&~failure&self.active;failure&=self.active;terminal=success|failure;timeout=(self.episode_length_buf>=self.max_episode_length)&self.active&~terminal;newdone=terminal|timeout;dones=~self.active|newdone
-  reward=shaped_reward(success,failure,old,m['potential'],terminal,actions,prev,m['qd'][:,self.arm]);reward=torch.where(previous_active,reward,torch.zeros_like(reward));self.active&=~newdone
-  ended=torch.nonzero(newdone).flatten().cpu().numpy();result=success.detach().cpu().numpy();self.events.extend((int(self.current_ids[i]),bool(result[i])) for i in ended)
-  # Exact absorbing observations for already terminated worlds, with no repeated SGS outcomes.
-  x=obs['policy'];x[~previous_active]=self.absorbing_obs[~previous_active];self.absorbing_obs[newdone]=x[newdone];self.obs=obs;self.metrics=m;self.potential=m['potential'];self.active_steps+=int(previous_active.sum());self.total_steps+=self.num_envs
+   self.scene.update(PHYSICS_DT_S)
+   if (substep+1)%AUDIT_DECIMATION:continue
+   obs,m=self._observe()
+   finite=torch.isfinite(obs['policy']).all(1)&torch.isfinite(m['q']).all(1)&torch.isfinite(m['qd']).all(1)
+   if not finite.all():raise RuntimeError('Nonfinite native policy rollout; stop and preserve checkpoint')
+   failed=(m['qd'].abs()>2*self.speed).any(1)|(m['lo'][:,2]<.12)|(m['hi'][:,2]>1.5)|(m['lo'][:,0]<.12)|(m['hi'][:,0]>1.4)|(m['lo'][:,1]<-1.25)|(m['hi'][:,1]>1.25)
+   failed|=self._station_failure()
+   self.success_streak=torch.where(m['success'],self.success_streak+1,torch.zeros_like(self.success_streak))
+   succeeded=(self.success_streak>=SUCCESS_AUDIT_STEPS)&~failed&self.active;failed&=self.active
+   success|=succeeded;failure|=failed;new_terminal=succeeded|failed
+   self.absorbing_obs[new_terminal]=obs['policy'][new_terminal]
+   self.active&=~new_terminal
+  terminal=success|failure;timeout=(self.episode_length_buf>=self.max_episode_length)&self.active&~terminal
+  self.absorbing_obs[timeout]=obs['policy'][timeout];self.active&=~timeout
+  newdone=terminal|timeout;dones=~previous_active|newdone
+  reward=shaped_reward(success,failure,old,m['potential'],terminal,actions,prev,m['qd'][:,self.arm]);reward=torch.where(previous_active,reward,torch.zeros_like(reward))
+  ended=torch.nonzero(newdone).flatten().cpu().numpy();result=success.detach().cpu().numpy()
+  self.events.extend((int(self.current_ids[i]),bool(result[i])) for i in ended)
+  # Outcomes are latched once, with no reset inside a100ms policy action.
+  obs['policy'][~self.active]=self.absorbing_obs[~self.active]
+  self.obs=obs;self.metrics=m;self.potential=m['potential'];self.active_steps+=int(previous_active.sum());self.total_steps+=self.num_envs
   extras=dict(time_outs=timeout,log={'/success':float(success.sum()),'/failure':float(failure.sum()),'/label_up':float(m['score'].mean()),'/goal_distance_m':float(m['distance'].mean()),'/active_fraction':float(previous_active.float().mean())})
   if not self.active.any():self._new_block();obs=self.obs
   return obs,reward,dones,extras

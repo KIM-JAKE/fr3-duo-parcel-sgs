@@ -1,0 +1,22 @@
+{
+  "default": "dense32k_short_rollout",
+  "presets": {
+    "dense32k_short_rollout": {"mailer_envs":4096,"envs_per_gpu":32768,"horizon":8},
+    "balanced8k": {
+      "mailer_envs": 1024,
+      "envs_per_gpu": 8192,
+      "horizon": 8
+    },
+    "latency4k": {
+      "mailer_envs": 512,
+      "envs_per_gpu": 4096,
+      "horizon": 8
+    },
+    "capacity32k": {
+      "mailer_envs": 4096,
+      "envs_per_gpu": 32768,
+      "horizon": 32
+    }
+  },
+  "physics_changed": false
+}

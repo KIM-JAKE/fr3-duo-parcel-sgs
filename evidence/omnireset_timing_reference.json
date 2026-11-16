@@ -1,0 +1,14 @@
+{
+  "url": "https://github.com/UW-Lab/UWLab/blob/main/source/uwlab_tasks/uwlab_tasks/manager_based/manipulation/omnireset/config/ur5e_robotiq_2f85/rl_state_cfg.py#L635-L639",
+  "retrieved_date": "2026-11-16",
+  "source_physics_dt_s": 0.008333333333333333,
+  "source_decimation": 12,
+  "source_episode_duration_s": 16,
+  "derived_policy_hz": 10,
+  "derived_episode_steps": 160,
+  "our_physics_dt_s": 0.002,
+  "our_internal_substeps": 2,
+  "our_decimation": 50,
+  "our_policy_hz": 10,
+  "our_episode_steps": 160
+}

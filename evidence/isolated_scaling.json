@@ -1,0 +1,49 @@
+{
+  "state": "pass",
+  "results": [
+    {
+      "state": "pass",
+      "num_envs": 1024,
+      "mean_physics_step_s": 0.5988241785671562,
+      "physics_env_steps_per_s": 1710.0177926185086,
+      "control_steps_per_s": 171.00177926185086,
+      "peak_gpu_mib": 8348.9375,
+      "physics": "442 nodes,880 triangles,VBD40,dt.002,2substeps,full surface/self contact; production fast scene unchanged",
+      "scope": "Single isolated homogeneous mailer simulator,held controls; not full mixed PPO",
+      "source": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v19_bank/survivors/2000016_G_mailer_one_hand/batch_00000.npz"
+    },
+    {
+      "state": "pass",
+      "num_envs": 64,
+      "mean_physics_step_s": 0.08688721735961735,
+      "physics_env_steps_per_s": 736.5870601553564,
+      "control_steps_per_s": 73.65870601553564,
+      "peak_gpu_mib": 1350.875,
+      "physics": "442 nodes,880 triangles,VBD40,dt.002,2substeps,full surface/self contact; production fast scene unchanged",
+      "scope": "Single isolated homogeneous mailer simulator,held controls; not full mixed PPO",
+      "source": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v19_bank/survivors/2000016_G_mailer_one_hand/batch_00000.npz"
+    },
+    {
+      "state": "pass",
+      "num_envs": 4096,
+      "mean_physics_step_s": 2.213459264021367,
+      "physics_env_steps_per_s": 1850.497123022934,
+      "control_steps_per_s": 185.0497123022934,
+      "peak_gpu_mib": 30662.9375,
+      "physics": "442 nodes,880 triangles,VBD40,dt.002,2substeps,full surface/self contact; production fast scene unchanged",
+      "scope": "Single isolated homogeneous mailer simulator,held controls; not full mixed PPO",
+      "source": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v19_bank/survivors/2000016_G_mailer_one_hand/batch_00000.npz"
+    },
+    {
+      "state": "pass",
+      "num_envs": 256,
+      "mean_physics_step_s": 0.17731134360656142,
+      "physics_env_steps_per_s": 1443.7880554785143,
+      "control_steps_per_s": 144.3788055478514,
+      "peak_gpu_mib": 2786.9375,
+      "physics": "442 nodes,880 triangles,VBD40,dt.002,2substeps,full surface/self contact; production fast scene unchanged",
+      "scope": "Single isolated homogeneous mailer simulator,held controls; not full mixed PPO",
+      "source": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v19_bank/survivors/2000016_G_mailer_one_hand/batch_00000.npz"
+    }
+  ]
+}
