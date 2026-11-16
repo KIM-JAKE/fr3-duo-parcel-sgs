@@ -1,0 +1,28 @@
+{
+  "state": "complete",
+  "pid": 1107392,
+  "utc": "2026-11-16T02:41:33.529268+00:00",
+  "elapsed_s": 22.609505891799927,
+  "num_envs": 128,
+  "kind": "mailer",
+  "process_gpu_used_mib": 1992.0,
+  "finite": true,
+  "mean_physics_step_s": 0.26392849907279015,
+  "physics_env_steps_per_s": 484.9798352571931,
+  "gpu_used_mib": 2006.9375,
+  "gpu_total_mib": 182631.625,
+  "torch_peak_allocated_mib": 29.4921875,
+  "rollout_buffer_mib": 6.609375,
+  "hardware": "NVIDIA B200",
+  "benchmark_source_shard": "/home/jovyan/data-1/jake/parcel_cap_ur7e/fr3_duo_sgs/runtime/reset_scale_20261114/production_v10/survivors/000023_G_mailer_two_hand/batch_00000.npz",
+  "same_geometry_copies": true,
+  "contact_peaks": {
+    "soft": 245503,
+    "rigid": 9984,
+    "body_particle": 828,
+    "body_body": 60
+  },
+  "soft_cap_per_env": 8192,
+  "body_particle_cap": 4096,
+  "scope": "Capacity probe: full native robot and contact solver, held parcel, actor inference and rollout memory. Not PPO training or heterogeneous-geometry coverage. Shared-GPU timing is contention-dependent."
+}

@@ -1,0 +1,18 @@
+{
+  "state": "pass",
+  "configuration_count": 200000,
+  "ng_free_sampling_probability": {
+    "fresh_box": 0.25000000000000006,
+    "fresh_mailer": 0.25,
+    "mixed_history_box": 0.25,
+    "mixed_history_mailer": 0.25
+  },
+  "robot_dof": 54,
+  "scope": "CPU paths/assets/native SHA and sampling invariants; no fresh-server GPU rollout claimed",
+  "packages": {
+    "torch": "2.11.0+cu130",
+    "newton": "1.6.1",
+    "warp-lang": "1.17.0",
+    "rsl-rl-lib": "5.5.1"
+  }
+}

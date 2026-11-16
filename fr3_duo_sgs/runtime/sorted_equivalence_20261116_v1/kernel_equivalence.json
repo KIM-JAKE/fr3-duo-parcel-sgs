@@ -1,0 +1,21 @@
+{
+  "state": "pass",
+  "native_active_contacts": 245268,
+  "particle_count": 56576,
+  "incidences_preserved": 561694,
+  "all_particle_incidence_counts_exact": true,
+  "metrics": {
+    "force": {
+      "bitwise_equal": true,
+      "max_abs": 0.0,
+      "allclose": true
+    },
+    "hessian": {
+      "bitwise_equal": true,
+      "max_abs": 0.0,
+      "allclose": true
+    }
+  },
+  "implementation_sha256": "cdcd955346124aa72d815580237364ad2963ec47d88b7e16fe3aff6657f0fe89",
+  "scope": "Frozen native G contact input; all contact incidence membership and ascending order verified; native versus optimized force and Hessian. Does not by itself approve long-horizon rollout."
+}

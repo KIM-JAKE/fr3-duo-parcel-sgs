@@ -1,0 +1,67 @@
+{
+  "state": "pass",
+  "same_job_and_source_row": true,
+  "per_worker": [
+    {
+      "group": "0_G_box_two_hand",
+      "num_envs": 16384,
+      "old_step_s": 0.06306572755177815,
+      "new_step_s": 0.06338620069436729,
+      "step_time_reduction_percent": -0.5081573701437581,
+      "step_speedup": 0.9949441181348858,
+      "old_initialization_s": 4.642345,
+      "new_initialization_s": 4.177477
+    },
+    {
+      "group": "1_G_mailer_one_hand",
+      "num_envs": 4096,
+      "old_step_s": 10.938088518489772,
+      "new_step_s": 9.368890261898438,
+      "step_time_reduction_percent": 14.346183557929326,
+      "step_speedup": 1.1674903017033913,
+      "old_initialization_s": 425.601011,
+      "new_initialization_s": 81.300421
+    },
+    {
+      "group": "2_G_mailer_two_hand",
+      "num_envs": 4096,
+      "old_step_s": 14.019016595790163,
+      "new_step_s": 10.865117855913317,
+      "step_time_reduction_percent": 22.497289437719516,
+      "step_speedup": 1.2902774531948904,
+      "old_initialization_s": 425.185444,
+      "new_initialization_s": 63.635538
+    },
+    {
+      "group": "3_NO_mailer_one_touch",
+      "num_envs": 4096,
+      "old_step_s": 12.350956500507891,
+      "new_step_s": 9.979340703304237,
+      "step_time_reduction_percent": 19.201879604272996,
+      "step_speedup": 1.2376525531810327,
+      "old_initialization_s": 409.696119,
+      "new_initialization_s": 77.014823
+    },
+    {
+      "group": "4_NG_mailer",
+      "num_envs": 4096,
+      "old_step_s": 9.03577610097515,
+      "new_step_s": 8.292961074970663,
+      "step_time_reduction_percent": 8.2208215177479,
+      "step_speedup": 1.0895717487745613,
+      "old_initialization_s": 415.756305,
+      "new_initialization_s": 83.923472
+    }
+  ],
+  "old_case_elapsed_s": 922.4792611598969,
+  "new_case_elapsed_s": 479.3662021160126,
+  "case_elapsed_speedup": 1.9243727594642674,
+  "old_peak_gpu_gib": 152.08984375,
+  "new_peak_gpu_gib": 152.08984375,
+  "scope": "Matched held-state native contact probes on same physical GPU 6, 16k rigid + 4x4k deformable, 8 warmup +24 measured .002s steps; full-case elapsed includes model construction, not PPO throughput. Per-worker mean includes contention and workers completing at different times. No mesh/material/timestep/solver reductions.",
+  "proofs": {
+    "sorted_force_hessian": "bitwise equal on frozen245268-contact native state",
+    "face_contact_geometry": "bitwise equal for354131 face contacts across G1/G2/NO/NG",
+    "topology_filters": "all native CSR values and offsets bitwise equal across128worlds; full topology verified at every cache use"
+  }
+}

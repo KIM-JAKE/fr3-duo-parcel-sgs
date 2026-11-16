@@ -1,0 +1,102 @@
+{
+  "schema_version": "parcel_fr3_duo_cell_v1",
+  "physics_backend": "isaaclab3_newton_mjwarp",
+  "robot": {
+    "urdf": "/home/jovyan/data-1/jake/parcel_sgs_release_20261116/code/assets/robot/fr3_duo_dg5fm.urdf",
+    "sha256": "52e4f0ed9da6cebce514de11e4fa1b30610b2738e7ea3aeccb751bb0e076e9c0",
+    "dof": 54,
+    "root_xyz_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "arm_home_rad": [
+      0.0,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ]
+  },
+  "axes": {
+    "right_infeed": "+Y",
+    "left_output": "-Y",
+    "world_up": "+Z"
+  },
+  "station": {
+    "flip_table": {
+      "center_xyz_m": [
+        0.69,
+        0.0,
+        0.245
+      ],
+      "half_extents_m": [
+        0.4,
+        0.35,
+        0.025
+      ]
+    },
+    "infeed": {
+      "center_xyz_m": [
+        0.69,
+        0.705,
+        0.245
+      ],
+      "half_extents_m": [
+        0.39,
+        0.355,
+        0.025
+      ]
+    },
+    "output": {
+      "center_xyz_m": [
+        0.69,
+        -0.705,
+        0.245
+      ],
+      "half_extents_m": [
+        0.39,
+        0.355,
+        0.025
+      ]
+    },
+    "left_exit_plane_y_m": -1.06
+  },
+  "parcel": {
+    "rigid_box_half_extents_m": {
+      "min": [
+        0.05,
+        0.04,
+        0.025
+      ],
+      "max": [
+        0.16,
+        0.14,
+        0.105
+      ]
+    },
+    "rigid_box_mass_kg": [
+      0.15,
+      3.0
+    ],
+    "poly_mailer": {
+      "status": "Newton VBD surface deformable not yet validated",
+      "rigid_preview_is_not_training_data": true
+    }
+  },
+  "reset": {
+    "families": [
+      "reaching",
+      "nearobject",
+      "grasped",
+      "neargoal"
+    ],
+    "usable_target_per_family": 10000,
+    "generation_seed": 20261113,
+    "control_dt_s": 0.02,
+    "simulation_dt_s": 0.002,
+    "label_up_min_cos_for_success": 0.8
+  }
+}

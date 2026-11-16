@@ -1,0 +1,11 @@
+.local_isaaclab3/
+.cache/
+__pycache__/
+*.pyc
+runs/
+data/
+data_index/
+assets/
+prepared_data.json
+preflight.json
+fr3_duo_sgs/runtime/native_duo_usd/

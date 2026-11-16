@@ -1,0 +1,50 @@
+{
+  "box_NG": {
+    "success": 0,
+    "episodes": 0,
+    "success_rate": null,
+    "unique_resets": 0
+  },
+  "box_NO": {
+    "success": 0,
+    "episodes": 1,
+    "success_rate": 0.0,
+    "unique_resets": 1
+  },
+  "box_R": {
+    "success": 0,
+    "episodes": 0,
+    "success_rate": null,
+    "unique_resets": 0
+  },
+  "box_G": {
+    "success": 0,
+    "episodes": 0,
+    "success_rate": null,
+    "unique_resets": 0
+  },
+  "mailer_NG": {
+    "success": 6804,
+    "episodes": 6806,
+    "success_rate": 0.9997061416397296,
+    "unique_resets": 774
+  },
+  "mailer_NO": {
+    "success": 0,
+    "episodes": 14417,
+    "success_rate": 0.0,
+    "unique_resets": 1575
+  },
+  "mailer_R": {
+    "success": 0,
+    "episodes": 74,
+    "success_rate": 0.0,
+    "unique_resets": 70
+  },
+  "mailer_G": {
+    "success": 0,
+    "episodes": 2595,
+    "success_rate": 0.0,
+    "unique_resets": 376
+  }
+}

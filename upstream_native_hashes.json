@@ -1,0 +1,8 @@
+{
+  "newton/_src/solvers/vbd/solver_vbd.py": "d8ff6c214a47779ce5629aee5186401f8ff2090d5c225e9fef6996905e93dfd9",
+  "newton/_src/solvers/vbd/particle_vbd_kernels.py": "4d4afe7800698d5b94d8d36d5b6e556706ffdc12e74c1911da41763ae80cc73f",
+  "newton/_src/solvers/vbd/rigid_vbd_kernels.py": "c88eb7b4357e0f36d563ffd0ffe29b780543acfacbb2c17a2dc33f0f5026bdf3",
+  "newton/_src/geometry/soft_contacts_sdf.py": "d6b9ffc9a70f3352f6eff1adf3e0c1acda93c05381d5c10d056a7da4d6d5173f",
+  "newton/_src/geometry/tri_mesh_collision.py": "aa3b343f9e0f6b7f28139521a4dc43c02fa7454c1666dc688a630cec3566042c",
+  "newton/_src/sim/collide.py": "e7317309541ca88b8530423d5b8a2ed01a5d2719bf2280b2c93ab683bfa559fa"
+}

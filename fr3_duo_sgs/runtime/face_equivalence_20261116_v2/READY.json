@@ -1,0 +1,142 @@
+{
+  "state": "pass",
+  "cases": 4,
+  "results": [
+    {
+      "group": "1_G_mailer_one_hand",
+      "returncode": 0,
+      "proof": {
+        "state": "pass",
+        "native_face_contacts": 59463,
+        "identical_contact_keys": true,
+        "metrics": {
+          "soft_contact_barycentric": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_pos": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_vel": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_normal": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          }
+        },
+        "implementation_sha256": "6156e84745dd5b004f7ec9556bf3aa7e1a6543c3383d03f10a110935cc5548e0",
+        "source_job": "2000016_G_mailer_one_hand",
+        "scope": "Frozen actual native vertex/shape state and native AABB; all face contacts and geometric attributes compared. No mesh/material/solver reductions."
+      }
+    },
+    {
+      "group": "2_G_mailer_two_hand",
+      "returncode": 0,
+      "proof": {
+        "state": "pass",
+        "native_face_contacts": 97963,
+        "identical_contact_keys": true,
+        "metrics": {
+          "soft_contact_barycentric": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_pos": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_vel": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_normal": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          }
+        },
+        "implementation_sha256": "6156e84745dd5b004f7ec9556bf3aa7e1a6543c3383d03f10a110935cc5548e0",
+        "source_job": "000023_G_mailer_two_hand",
+        "scope": "Frozen actual native vertex/shape state and native AABB; all face contacts and geometric attributes compared. No mesh/material/solver reductions."
+      }
+    },
+    {
+      "group": "3_NO_mailer_one_touch",
+      "returncode": 0,
+      "proof": {
+        "state": "pass",
+        "native_face_contacts": 130657,
+        "identical_contact_keys": true,
+        "metrics": {
+          "soft_contact_barycentric": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_pos": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_vel": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_normal": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          }
+        },
+        "implementation_sha256": "6156e84745dd5b004f7ec9556bf3aa7e1a6543c3383d03f10a110935cc5548e0",
+        "source_job": "000016_NO_mailer_one_touch",
+        "scope": "Frozen actual native vertex/shape state and native AABB; all face contacts and geometric attributes compared. No mesh/material/solver reductions."
+      }
+    },
+    {
+      "group": "4_NG_mailer",
+      "returncode": 0,
+      "proof": {
+        "state": "pass",
+        "native_face_contacts": 66048,
+        "identical_contact_keys": true,
+        "metrics": {
+          "soft_contact_barycentric": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_pos": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_body_vel": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          },
+          "soft_contact_normal": {
+            "bitwise_equal": true,
+            "max_abs": 0.0,
+            "allclose": true
+          }
+        },
+        "implementation_sha256": "6156e84745dd5b004f7ec9556bf3aa7e1a6543c3383d03f10a110935cc5548e0",
+        "source_job": "000019_NG_mailer",
+        "scope": "Frozen actual native vertex/shape state and native AABB; all face contacts and geometric attributes compared. No mesh/material/solver reductions."
+      }
+    }
+  ]
+}

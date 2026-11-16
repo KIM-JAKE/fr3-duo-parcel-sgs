@@ -1,0 +1,9 @@
+{
+  "state": "pass",
+  "verified_native_worlds": 128,
+  "nodes_per_env": 442,
+  "triangles_per_env": 880,
+  "edges_per_env": 1320,
+  "all_native_filter_values_and_offsets_exact": true,
+  "template_sha256": "34bbd8c9385bfb87f25c83a4a775c63df2efdff534415f71ffaf4387c4ede6b8"
+}

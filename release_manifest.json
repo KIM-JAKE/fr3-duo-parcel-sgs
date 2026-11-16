@@ -1,0 +1,12 @@
+{
+  "dataset_repo": "jaeikkim/fr3-duo-parcel-resets-200k",
+  "dataset_revision": "e6c988ada510f564acc923adbd3fe02df2632243",
+  "upstream_isaaclab_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+  "ng_free_target": 0.25,
+  "changed_from_original": [
+    "NG weights balanced per kind using no-action flags",
+    "simulator child uses current Python executable",
+    "portable supervised launcher and dataset path relocation"
+  ],
+  "physics_changed": false
+}

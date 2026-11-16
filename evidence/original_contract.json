@@ -1,0 +1,19 @@
+{
+  "gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "num_envs_per_rank": 32768,
+  "box_per_rank": 16384,
+  "mailer_per_rank": 16384,
+  "mailer_shards_per_rank": 4,
+  "num_envs_per_mailer_shard": 4096,
+  "total_simultaneous_envs": 131072,
+  "physics": "Unchanged native 442-node/880-triangle deformable, material, self contact and full vertex/edge/face contacts, VBD40, dt.002 and two substeps. Only exact computation/data reuse optimized; allocation overflows fatal.",
+  "sampler": "SGS within fixed 50/50 box/mailer strata; global per-reset history synchronized across 4 PPO ranks and 20 native simulators.",
+  "modality": "Privileged teacher; RGB distillation is outside this run.",
+  "resume": "Rerun this exact workflow under tmux after prior owned descendants exit. Source guard revalidated, checkpoints SHA-checked, latest production four-rank set used. No reuse of diagnostic policy weights. Before the first production checkpoint restart is from the recorded seed.",
+  "config": "RSL-RL PPO 512/256/128, lr3e-4 adaptiveKL, gamma.99 lam.95, clip.2, four epochs/four minibatches, horizon32, 256 control-step episodes; checkpoint every iteration."
+}

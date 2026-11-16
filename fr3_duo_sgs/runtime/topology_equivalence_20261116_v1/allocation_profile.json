@@ -1,0 +1,4371 @@
+{
+  "num_envs": 128,
+  "counts": {
+    "soft_contact_max": 1048576,
+    "soft_contact_pair_count": 4526080,
+    "rigid_contact_max": 246400,
+    "soft_edge_rigid_pairs": 13516800,
+    "soft_face_rigid_pairs": 9011200,
+    "contacts.soft_contact_count": {
+      "max": 245254,
+      "sum": 245254
+    },
+    "contacts.rigid_contact_count": {
+      "max": 9728,
+      "sum": 9728
+    },
+    "solver.body_particle_contact_counts": {
+      "max": 825,
+      "sum": 245254
+    },
+    "solver.body_body_contact_counts": {
+      "max": 58,
+      "sum": 16128
+    }
+  },
+  "warp_unique_bytes": 947919446,
+  "allocations": [
+    {
+      "path": "solver.body_particle_contact_indices",
+      "shape": [
+        30932992
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 123731968
+    },
+    {
+      "path": "contacts.soft_contact_tids",
+      "shape": [
+        27054080
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 108216320
+    },
+    {
+      "path": "pipeline.soft_edge_rigid_pairs",
+      "shape": [
+        13516800
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 108134400
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.edge_colliding_edges",
+      "shape": [
+        21626880
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 86507520
+    },
+    {
+      "path": "pipeline.soft_face_rigid_pairs",
+      "shape": [
+        9011200
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 72089600
+    },
+    {
+      "path": "solver._particle_contact_next",
+      "shape": [
+        13578240
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 54312960
+    },
+    {
+      "path": "pipeline.soft_rigid_contact_pairs",
+      "shape": [
+        4526080
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 36208640
+    },
+    {
+      "path": "solver.body_particle_contact_penalty_k",
+      "shape": [
+        4526080
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 18104320
+    },
+    {
+      "path": "solver.body_particle_contact_material_ke",
+      "shape": [
+        4526080
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 18104320
+    },
+    {
+      "path": "solver.body_particle_contact_material_kd",
+      "shape": [
+        4526080
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 18104320
+    },
+    {
+      "path": "solver.body_particle_contact_material_mu",
+      "shape": [
+        4526080
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 18104320
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.position_depth",
+      "shape": [
+        1000001
+      ],
+      "dtype": "<class 'warp._src.types.vec4f'>",
+      "bytes": 16000016
+    },
+    {
+      "path": "solver.trimesh_collision_detector.edge_filtering_list",
+      "shape": [
+        3670016
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 14680064
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.ht_values",
+      "shape": [
+        1835008
+      ],
+      "dtype": "<class 'warp._src.types.uint64'>",
+      "bytes": 14680064
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.vertex_colliding_triangles",
+      "shape": [
+        3620864
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 14483456
+    },
+    {
+      "path": "contacts.soft_contact_indices",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.vec3i'>",
+      "bytes": 12582912
+    },
+    {
+      "path": "contacts.soft_contact_barycentric",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 12582912
+    },
+    {
+      "path": "contacts.soft_contact_body_pos",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 12582912
+    },
+    {
+      "path": "contacts.soft_contact_body_vel",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 12582912
+    },
+    {
+      "path": "contacts.soft_contact_normal",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 12582912
+    },
+    {
+      "path": "pipeline.narrow_phase.triangle_pairs",
+      "shape": [
+        1000000
+      ],
+      "dtype": "<class 'warp._src.types.vec3i'>",
+      "bytes": 12000000
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.normal",
+      "shape": [
+        1000001
+      ],
+      "dtype": "<class 'warp._src.types.vec2f'>",
+      "bytes": 8000008
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.shape_pairs",
+      "shape": [
+        1000001
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 8000008
+    },
+    {
+      "path": "solver.body_body_contact_indices",
+      "shape": [
+        1933312
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 7733248
+    },
+    {
+      "path": "solver.model.soft_mesh_adjacency_device.v_adj_edges",
+      "shape": [
+        1351680
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 5406720
+    },
+    {
+      "path": "contacts.soft_contact_particle",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4194304
+    },
+    {
+      "path": "contacts.soft_contact_shape",
+      "shape": [
+        1048576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4194304
+    },
+    {
+      "path": "solver.trimesh_collision_detector.vertex_triangle_filtering_list",
+      "shape": [
+        1007104
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4028416
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.contact_fingerprints",
+      "shape": [
+        1000001
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4000004
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.exported_flags",
+      "shape": [
+        1000001
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4000004
+    },
+    {
+      "path": "contacts.rigid_contact_point0",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "contacts.rigid_contact_point1",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "contacts.rigid_contact_offset0",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "contacts.rigid_contact_offset1",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "contacts.rigid_contact_normal",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "contacts.rigid_contact_force",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "solver.body_body_contact_lambda",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "solver.body_body_contact_C0",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2956800
+    },
+    {
+      "path": "solver.model.edge_indices",
+      "shape": [
+        168960,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2703360
+    },
+    {
+      "path": "solver.model.soft_mesh_adjacency_device.v_adj_tris",
+      "shape": [
+        675840
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2703360
+    },
+    {
+      "path": "solver.model.tri_materials",
+      "shape": [
+        112640,
+        5
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 2252800
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.hashtable.keys",
+      "shape": [
+        262144
+      ],
+      "dtype": "<class 'warp._src.types.uint64'>",
+      "bytes": 2097152
+    },
+    {
+      "path": "solver.particle_hessians",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 2036736
+    },
+    {
+      "path": "solver.trimesh_collision_detector.lower_bounds_edges",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2027520
+    },
+    {
+      "path": "solver.trimesh_collision_detector.upper_bounds_edges",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 2027520
+    },
+    {
+      "path": "pipeline.narrow_phase.split_query_results",
+      "shape": [
+        49280
+      ],
+      "dtype": "<warp._src.codegen.Struct object at 0x71005c52c6e0>",
+      "bytes": 1971200
+    },
+    {
+      "path": "solver.model.tri_poses",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.mat22f'>",
+      "bytes": 1802240
+    },
+    {
+      "path": "solver.model.tri_indices",
+      "shape": [
+        112640,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "solver.model.tri_color",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "solver.model.edge_bending_properties",
+      "shape": [
+        168960,
+        2
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "solver.model.soft_mesh_adjacency_device.edge_tri_indices",
+      "shape": [
+        168960,
+        2
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "solver.model.soft_mesh_adjacency_device.tri_edge_indices",
+      "shape": [
+        112640,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "solver.trimesh_collision_detector.lower_bounds_tris",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "solver.trimesh_collision_detector.upper_bounds_tris",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 1351680
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.hashtable.active_slots",
+      "shape": [
+        262145
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1048580
+    },
+    {
+      "path": "contacts.rigid_contact_point_id",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "contacts.rigid_contact_shape0",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "contacts.rigid_contact_shape1",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "contacts.rigid_contact_margin0",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "contacts.rigid_contact_margin1",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "contacts.rigid_contact_tids",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.body_body_contact_penalty_k",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.body_body_contact_normal_rho",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.body_body_contact_material_ke",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.body_body_contact_material_kd",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.body_body_contact_material_mu",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.body_body_contact_tangent_rho",
+      "shape": [
+        246400
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 985600
+    },
+    {
+      "path": "solver.model.particle_q",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.model.particle_qd",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.model.bvh_particles.lowers",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.model.bvh_particles.uppers",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.particle_q_prev",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.inertia",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.trimesh_collision_detector.vertex_positions",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.particle_forces",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.pos_prev_collision_detection",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.particle_displacements",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "state0.particle_q",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "state0.particle_qd",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "state0.particle_f",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "state1.particle_qd",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "state1.particle_f",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 678912
+    },
+    {
+      "path": "solver.trimesh_collision_detector.edge_filtering_list_offsets",
+      "shape": [
+        168961
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 675844
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.edge_colliding_edges_offsets",
+      "shape": [
+        168961
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 675844
+    },
+    {
+      "path": "solver.model.edge_rest_angle",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 675840
+    },
+    {
+      "path": "solver.model.edge_rest_length",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 675840
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.edge_colliding_edges_buffer_sizes",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 675840
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.edge_colliding_edges_count",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 675840
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.edge_colliding_edges_min_dist",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 675840
+    },
+    {
+      "path": "solver.trimesh_collision_detector.edge_groups",
+      "shape": [
+        168960
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 675840
+    },
+    {
+      "path": "solver.model.tri_activations",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 450560
+    },
+    {
+      "path": "solver.model.tri_areas",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 450560
+    },
+    {
+      "path": "solver.model.tri_opacity",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 450560
+    },
+    {
+      "path": "solver.trimesh_collision_detector.tri_groups",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 450560
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.triangle_colliding_vertices_min_dist",
+      "shape": [
+        112640
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 450560
+    },
+    {
+      "path": "solver.model.shape_contact_pairs",
+      "shape": [
+        49280
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 394240
+    },
+    {
+      "path": "pipeline.narrow_phase.gjk_candidate_pairs",
+      "shape": [
+        49280
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 394240
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_pairs_mesh",
+      "shape": [
+        49280
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 394240
+    },
+    {
+      "path": "pipeline.broad_phase_shape_pairs",
+      "shape": [
+        49280
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 394240
+    },
+    {
+      "path": "solver.model.shape_transform",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 283164
+    },
+    {
+      "path": "solver.model.bvh_shape_world_transforms",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 283164
+    },
+    {
+      "path": "pipeline.geom_transform",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 283164
+    },
+    {
+      "path": "solver.model.body_inertia",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 271872
+    },
+    {
+      "path": "solver.model.body_inv_inertia",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 271872
+    },
+    {
+      "path": "solver.body_hessian_aa",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 271872
+    },
+    {
+      "path": "solver.body_hessian_al",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 271872
+    },
+    {
+      "path": "solver.body_hessian_ll",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 271872
+    },
+    {
+      "path": "solver.body_inv_inertia_effective",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.mat33f'>",
+      "bytes": 271872
+    },
+    {
+      "path": "solver.model.bvh_shape_bounds",
+      "shape": [
+        10113,
+        2
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 242712
+    },
+    {
+      "path": "solver.model.soft_mesh_adjacency_device.v_adj_tris_offsets",
+      "shape": [
+        56577
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226308
+    },
+    {
+      "path": "solver.model.soft_mesh_adjacency_device.v_adj_edges_offsets",
+      "shape": [
+        56577
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226308
+    },
+    {
+      "path": "solver.trimesh_collision_detector.vertex_triangle_filtering_list_offsets",
+      "shape": [
+        56577
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226308
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.vertex_colliding_triangles_offsets",
+      "shape": [
+        56577
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226308
+    },
+    {
+      "path": "solver.model.particle_mass",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.particle_inv_mass",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.particle_radius",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.particle_flags",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.particle_world",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.bvh_particles.groups",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.particle_colors",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.particle_conservative_bounds",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.vertex_colliding_triangles_buffer_sizes",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.vertex_colliding_triangles_count",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.trimesh_collision_detector.collision_info.vertex_colliding_triangles_min_dist",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.truncation_ts",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver._particle_contact_head",
+      "shape": [
+        56576
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 226304
+    },
+    {
+      "path": "solver.model.body_q",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "solver.model.joint_X_p",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "solver.model.joint_X_c",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "solver.body_q_prev",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "solver._coupling_body_q_prev_snapshot",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "solver.body_inertia_q",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "state0.body_q",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "state1.body_q",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.transformf'>",
+      "bytes": 211456
+    },
+    {
+      "path": "solver.model.mesh_edge_centers",
+      "shape": [
+        12721
+      ],
+      "dtype": "<class 'warp._src.types.vec4f'>",
+      "bytes": 203536
+    },
+    {
+      "path": "solver.model.mesh_edge_halves",
+      "shape": [
+        12721
+      ],
+      "dtype": "<class 'warp._src.types.vec4f'>",
+      "bytes": 203536
+    },
+    {
+      "path": "pipeline.narrow_phase.split_gjk_work_items",
+      "shape": [
+        49280
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 197120
+    },
+    {
+      "path": "pipeline.narrow_phase.split_manifold_work_items",
+      "shape": [
+        49280
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 197120
+    },
+    {
+      "path": "solver.model.body_qd",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.spatial_vectorf'>",
+      "bytes": 181248
+    },
+    {
+      "path": "solver._body_f_for_integration",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.spatial_vectorf'>",
+      "bytes": 181248
+    },
+    {
+      "path": "state0.body_qd",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.spatial_vectorf'>",
+      "bytes": 181248
+    },
+    {
+      "path": "state0.body_f",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.spatial_vectorf'>",
+      "bytes": 181248
+    },
+    {
+      "path": "state1.body_qd",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.spatial_vectorf'>",
+      "bytes": 181248
+    },
+    {
+      "path": "state1.body_f",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.spatial_vectorf'>",
+      "bytes": 181248
+    },
+    {
+      "path": "solver.model._shape_support_data",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec4i'>",
+      "bytes": 161808
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_shape_support_data",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec4i'>",
+      "bytes": 161808
+    },
+    {
+      "path": "pipeline.geom_data",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec4f'>",
+      "bytes": 161808
+    },
+    {
+      "path": "solver.model.shape_scale",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 121356
+    },
+    {
+      "path": "solver.model.shape_color",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 121356
+    },
+    {
+      "path": "solver.model.shape_collision_aabb_lower",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 121356
+    },
+    {
+      "path": "solver.model.shape_collision_aabb_upper",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 121356
+    },
+    {
+      "path": "solver.model._shape_voxel_resolution",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3i'>",
+      "bytes": 121356
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_aabb_lower",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 121356
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_aabb_upper",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 121356
+    },
+    {
+      "path": "solver.model.joint_axis",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 119808
+    },
+    {
+      "path": "solver.model.mesh_edge_indices",
+      "shape": [
+        12721
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 101768
+    },
+    {
+      "path": "solver.model.body_com",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.body_torques",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.body_forces",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_lambda_lin",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_lambda_ang",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_C0_lin",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_C0_ang",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_sigma_prev",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_kappa_prev",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_dkappa_prev",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_sigma_start",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_C_fric",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_rod_rest_kb_local",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 90624
+    },
+    {
+      "path": "solver.joint_penalty_k",
+      "shape": [
+        20992
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 83968
+    },
+    {
+      "path": "solver.joint_penalty_k_min",
+      "shape": [
+        20992
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 83968
+    },
+    {
+      "path": "solver.joint_material_k",
+      "shape": [
+        20992
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 83968
+    },
+    {
+      "path": "solver.joint_rho",
+      "shape": [
+        20992
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 83968
+    },
+    {
+      "path": "solver.joint_penalty_kd",
+      "shape": [
+        20992
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 83968
+    },
+    {
+      "path": "solver.joint_is_hard",
+      "shape": [
+        20992
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 83968
+    },
+    {
+      "path": "solver.model.shape_source_ptr",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.uint64'>",
+      "bytes": 80904
+    },
+    {
+      "path": "solver.model.shape_edge_range",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 80904
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_edge_range",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 80904
+    },
+    {
+      "path": "solver.model.particle_color_groups.0",
+      "shape": [
+        17920
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 71680
+    },
+    {
+      "path": "solver.model.particle_color_groups.1",
+      "shape": [
+        17920
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 71680
+    },
+    {
+      "path": "solver.model.particle_color_groups.2",
+      "shape": [
+        17792
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 71168
+    },
+    {
+      "path": "solver.model.joint_dof_dim",
+      "shape": [
+        7552,
+        2
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 60416
+    },
+    {
+      "path": "solver.rigid_adjacency.body_adj_joints",
+      "shape": [
+        14464
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 57856
+    },
+    {
+      "path": "solver.model.joint_q",
+      "shape": [
+        10496
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 41984
+    },
+    {
+      "path": "solver.model.joint_target_q",
+      "shape": [
+        10496
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 41984
+    },
+    {
+      "path": "state0.joint_q",
+      "shape": [
+        10496
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 41984
+    },
+    {
+      "path": "state1.joint_q",
+      "shape": [
+        10496
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 41984
+    },
+    {
+      "path": "solver.model.shape_body",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_flags",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_ke",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_kd",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_kf",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_ka",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_mu",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_restitution",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_mu_torsional",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_mu_rolling",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_material_kh",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_gap",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_type",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_margin",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_opacity",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_collision_group",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_collision_radius",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_world",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.bvh_shape_enabled",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.shape_heightfield_index",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model._shape_mesh_properties",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model._shape_sdf_index",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_mesh_properties",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 40452
+    },
+    {
+      "path": "solver.model.joint_qd",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_f",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_target_qd",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_act",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_armature",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_target_mode",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_target_ke",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_target_kd",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_damping",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_effort_limit",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_velocity_limit",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_friction",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_limit_lower",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_limit_upper",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_limit_ke",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_limit_kd",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.joint_rest_angle",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.joint_drive_limit_support",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.joint_drive_lambda",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.joint_limit_lambda",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "state0.joint_qd",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "state1.joint_qd",
+      "shape": [
+        9984
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 39936
+    },
+    {
+      "path": "solver.model.joint_q_start",
+      "shape": [
+        7553
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30212
+    },
+    {
+      "path": "solver.model.joint_qd_start",
+      "shape": [
+        7553
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30212
+    },
+    {
+      "path": "solver.rigid_adjacency.body_adj_joints_offsets",
+      "shape": [
+        7553
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30212
+    },
+    {
+      "path": "solver.model.body_mass",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.body_inv_mass",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.body_flags",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.body_world",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.joint_type",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.joint_articulation",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.joint_parent",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.joint_child",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.joint_ancestor",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.joint_world",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model._fk_level_joints",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model._fk_level_parent_pos",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.body_colors",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.body_body_contact_counts",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.body_particle_contact_counts",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.joint_constraint_dim",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.joint_constraint_start",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.body_structural_k",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.joint_dahl_eps_max",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.joint_dahl_tau",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.joint_rod_rest_twist",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.body_inv_mass_effective",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 30208
+    },
+    {
+      "path": "solver.model.body_color_groups.0",
+      "shape": [
+        3968
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 15872
+    },
+    {
+      "path": "solver.model._texture_sdf_data",
+      "shape": [
+        75
+      ],
+      "dtype": "<warp._src.codegen.Struct object at 0x71005c494230>",
+      "bytes": 14400
+    },
+    {
+      "path": "solver.model.body_color_groups.1",
+      "shape": [
+        3584
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 14336
+    },
+    {
+      "path": "solver.model.shape_is_solid",
+      "shape": [
+        10113
+      ],
+      "dtype": "<class 'warp._src.types.bool'>",
+      "bytes": 10113
+    },
+    {
+      "path": "solver.model.particle_color_groups.3",
+      "shape": [
+        2432
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 9728
+    },
+    {
+      "path": "solver.model._fk_level_joint_start",
+      "shape": [
+        2049
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 8196
+    },
+    {
+      "path": "solver.model.joint_enabled",
+      "shape": [
+        7552
+      ],
+      "dtype": "<class 'warp._src.types.bool'>",
+      "bytes": 7552
+    },
+    {
+      "path": "solver.model.bvh_shapes.lowers",
+      "shape": [
+        512
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 6144
+    },
+    {
+      "path": "solver.model.bvh_shapes.uppers",
+      "shape": [
+        512
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 6144
+    },
+    {
+      "path": "solver.model.articulation_start",
+      "shape": [
+        641
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2564
+    },
+    {
+      "path": "solver.model._fk_articulation_level_start",
+      "shape": [
+        641
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2564
+    },
+    {
+      "path": "solver.model.articulation_end",
+      "shape": [
+        640
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2560
+    },
+    {
+      "path": "solver.model.articulation_world",
+      "shape": [
+        640
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2560
+    },
+    {
+      "path": "solver.model.bvh_shapes.groups",
+      "shape": [
+        512
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2048
+    },
+    {
+      "path": "solver.model.particle_color_groups.4",
+      "shape": [
+        512
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 2048
+    },
+    {
+      "path": "solver.model.gravity",
+      "shape": [
+        129
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 1548
+    },
+    {
+      "path": "solver.model.shape_source.1.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.2.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.3.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.4.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.5.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.6.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.7.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.8.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.10.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.15.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.20.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.21.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.23.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.24.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.25.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.26.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.27.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.28.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.29.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.30.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.36.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.37.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.38.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.39.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.45.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.50.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.58.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.59.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.60.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.62.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.63.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.64.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.71.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.72.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.73.mesh.indices",
+      "shape": [
+        372
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1488
+    },
+    {
+      "path": "solver.model.shape_source.32.mesh.indices",
+      "shape": [
+        348
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1392
+    },
+    {
+      "path": "solver.model.shape_source.33.mesh.indices",
+      "shape": [
+        342
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1368
+    },
+    {
+      "path": "solver.model.shape_source.34.mesh.indices",
+      "shape": [
+        300
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1200
+    },
+    {
+      "path": "solver.model.shape_source.35.mesh.indices",
+      "shape": [
+        300
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1200
+    },
+    {
+      "path": "solver.model.shape_source.31.mesh.indices",
+      "shape": [
+        264
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1056
+    },
+    {
+      "path": "solver.model.shape_source.74.mesh.indices",
+      "shape": [
+        252
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 1008
+    },
+    {
+      "path": "solver.trimesh_collision_info",
+      "shape": [
+        1
+      ],
+      "dtype": "<warp._src.codegen.Struct object at 0x7100c24ee600>",
+      "bytes": 840
+    },
+    {
+      "path": "solver.model.shape_source.1.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.1.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.2.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.2.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.3.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.3.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.4.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.4.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.5.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.5.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.6.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.6.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.7.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.7.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.8.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.8.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.10.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.10.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.15.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.15.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.20.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.20.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.21.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.21.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.23.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.23.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.24.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.24.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.25.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.25.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.26.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.26.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.27.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.27.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.28.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.28.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.29.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.29.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.30.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.30.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.36.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.36.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.37.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.37.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.38.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.38.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.39.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.39.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.45.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.45.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.50.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.50.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.58.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.58.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.59.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.59.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.60.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.60.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.62.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.62.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.63.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.63.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.64.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.64.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.71.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.71.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.72.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.72.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.73.mesh._points",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.73.mesh._velocities",
+      "shape": [
+        64
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 768
+    },
+    {
+      "path": "solver.model.shape_source.32.mesh._points",
+      "shape": [
+        60
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 720
+    },
+    {
+      "path": "solver.model.shape_source.32.mesh._velocities",
+      "shape": [
+        60
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 720
+    },
+    {
+      "path": "solver.model.shape_source.33.mesh._points",
+      "shape": [
+        59
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 708
+    },
+    {
+      "path": "solver.model.shape_source.33.mesh._velocities",
+      "shape": [
+        59
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 708
+    },
+    {
+      "path": "solver.model.shape_source.34.mesh._points",
+      "shape": [
+        52
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 624
+    },
+    {
+      "path": "solver.model.shape_source.34.mesh._velocities",
+      "shape": [
+        52
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 624
+    },
+    {
+      "path": "solver.model.shape_source.35.mesh._points",
+      "shape": [
+        52
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 624
+    },
+    {
+      "path": "solver.model.shape_source.35.mesh._velocities",
+      "shape": [
+        52
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 624
+    },
+    {
+      "path": "solver.model.shape_source.31.mesh._points",
+      "shape": [
+        46
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 552
+    },
+    {
+      "path": "solver.model.shape_source.31.mesh._velocities",
+      "shape": [
+        46
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 552
+    },
+    {
+      "path": "solver.model.shape_source.74.mesh._points",
+      "shape": [
+        44
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 528
+    },
+    {
+      "path": "solver.model.shape_source.74.mesh._velocities",
+      "shape": [
+        44
+      ],
+      "dtype": "<class 'warp._src.types.vec3f'>",
+      "bytes": 528
+    },
+    {
+      "path": "solver.model.particle_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.shape_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.body_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.joint_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.joint_dof_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.joint_coord_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.joint_constraint_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.articulation_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.mujoco.equality_constraint_world_start",
+      "shape": [
+        130
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 520
+    },
+    {
+      "path": "solver.model.bvh_shapes_group_roots",
+      "shape": [
+        129
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 516
+    },
+    {
+      "path": "solver.model.bvh_particles_group_roots",
+      "shape": [
+        129
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 516
+    },
+    {
+      "path": "solver.trimesh_collision_detector.bvh_tris_group_roots",
+      "shape": [
+        129
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 516
+    },
+    {
+      "path": "solver.trimesh_collision_detector.bvh_edges_group_roots",
+      "shape": [
+        129
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 516
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.1",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.2",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.3",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.5",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.6",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.7",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.8",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.9",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.10",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.11",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.12",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.13",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.14",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.15",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.16",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.17",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.18",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.19",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.21",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.22",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.23",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.24",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.27",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.28",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.31",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.32",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.36",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.37",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.38",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.40",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.41",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.42",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.43",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.44",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.45",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.46",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.47",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.48",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.49",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.50",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.51",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.52",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.53",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.54",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.56",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.57",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.58",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.59",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.62",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.63",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.66",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.67",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 256
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.0",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.4",
+      "shape": [
+        4,
+        3,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.20",
+      "shape": [
+        3,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.25",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.26",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.29",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.33",
+      "shape": [
+        3,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.34",
+      "shape": [
+        3,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.35",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.39",
+      "shape": [
+        4,
+        3,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.55",
+      "shape": [
+        3,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.60",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.61",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.64",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.68",
+      "shape": [
+        3,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.69",
+      "shape": [
+        3,
+        4,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.70",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.71",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.73",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.74",
+      "shape": [
+        4,
+        4,
+        3
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 192
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.30",
+      "shape": [
+        3,
+        3,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 144
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.65",
+      "shape": [
+        3,
+        3,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 144
+    },
+    {
+      "path": "solver._rigid_pose_rebaseline_mask",
+      "shape": [
+        129
+      ],
+      "dtype": "<class 'warp._src.types.bool'>",
+      "bytes": 129
+    },
+    {
+      "path": "solver.model._texture_sdf_subgrid_start_slots.72",
+      "shape": [
+        2,
+        3,
+        4
+      ],
+      "dtype": "<class 'warp._src.types.uint32'>",
+      "bytes": 96
+    },
+    {
+      "path": "pipeline.narrow_phase._counter_array",
+      "shape": [
+        11
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 44
+    },
+    {
+      "path": "solver.model.heightfield_data",
+      "shape": [
+        1
+      ],
+      "dtype": "<warp._src.codegen.Struct object at 0x7100c2be34d0>",
+      "bytes": 28
+    },
+    {
+      "path": "solver.trimesh_collision_detector.resize_flags",
+      "shape": [
+        4
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 16
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_edge_centers",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.vec4f'>",
+      "bytes": 16
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_edge_halves",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.vec4f'>",
+      "bytes": 16
+    },
+    {
+      "path": "contacts.contact_counters",
+      "shape": [
+        2
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 8
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_edge_indices",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.vec2i'>",
+      "bytes": 8
+    },
+    {
+      "path": "contacts.contact_generation",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "contacts.soft_contact_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.model._convex_support_lut",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.model._convex_support_vertex_offsets",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.model._convex_support_neighbors",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.model.heightfield_elevations",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.float32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.model.muscle_start",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.body_body_contact_overflow_max",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver.body_particle_contact_overflow_max",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "solver._rigid_contact_zero_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.contact_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.global_contact_reducer.ht_insert_failures",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.split_gjk_work_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.split_manifold_work_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_pairs_sdf_sdf_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_pairs_mesh_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.triangle_pairs_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_pairs_mesh_plane_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_plane_vertex_total_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_plane_total_weight",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_mesh_total_weight",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.shape_pairs_mesh_mesh_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_support_lut",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_support_vertex_offsets",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase._empty_support_neighbors",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_mesh_block_offsets",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_mesh_block_counts",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_plane_block_offsets",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.narrow_phase.mesh_plane_block_counts",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    },
+    {
+      "path": "pipeline.broad_phase_pair_count",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'warp._src.types.int32'>",
+      "bytes": 4
+    }
+  ]
+}

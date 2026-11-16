@@ -1,0 +1,22 @@
+{
+  "train_mixed_sgs_ppo_v3.py": "acc7aac21d4e73b6bc1709b3afd948d0a0236d04f67ddebf8315dce54a6953d4",
+  "parcel_mixed_sgs_env_v3.py": "9d5858744c9ae7d4692b732a1a0985df5674ccab60985b7de57b2f6caf9a83a0",
+  "parcel_sgs_rpc_worker_v3.py": "d86a1ea4250cbf17345326a791ca62bbb455d3622deff6072accd2a39741d791",
+  "parcel_fast_scene_v3.py": "b4214e1a38ec7cfa18652fda5450c817fb46c57814d813e9b8806b8ecc658a8e",
+  "sorted_contact_vbd_v1.py": "cdcd955346124aa72d815580237364ad2963ec47d88b7e16fe3aff6657f0fe89",
+  "specialized_face_contacts_v3.py": "6156e84745dd5b004f7ec9556bf3aa7e1a6543c3383d03f10a110935cc5548e0",
+  "exact_topology_cache_v1.py": "17f85f7b7f84f304c118a56825c0aaa460a77a6adacdf4e7fb82c78c1f5d48c8",
+  "parcel_sgs_env.py": "f47acf0a27df31e1bedb83b4b784a77f52504030f4965d3b848586ae1fcc3e72",
+  "parcel_native_scene.py": "2df6bd62a0e6bac8b4b39fd1b847959dab343565293f65a7bb9b7187bf9f7ff1",
+  "parcel_rl_math.py": "d4f2cff991b10649738cb87225cee4f1513182dd53f22ca9c413f8013d6dd514",
+  "sgs_sampler.py": "7755ec84a44d56664721dfa6a948400957caf03fc1e2ab2a75eb96cb91cbafa2",
+  "newton_cell_cfg.py": "f9d3f05c0173addb894fd627e2c9da969d15dec54d684454cebc7972166f948c",
+  "cell_config.json": "58d23a11c9ca865078c30a96e9424dff42a9dad7facf31fe04e65c6824c155b9",
+  "scaled_reset_io.py": "9c75f2739eb1e7561bd2145f5bee279b46a3233baa6a681b6254f7e854a0ab4b",
+  "task_success.py": "5a045a0ff119c93e186849e69b42c3d97884298d8de8ee29bc4221290415ae43",
+  "mailer_surface.py": "d0e8af916f526011cef9818ab05068e5fd4aaf20a340c3f3bebd8d5922922d31",
+  "mailer_enclosure_audit.py": "902bec2b3a28783669396b7bfbb449b169903cdb1750cd8669faf45912416840",
+  "NEWTON_OPTIMIZATION_NOTICES.md": "b865883ccb59a747c5a98ae759cc0b51e6012c9a169e06ffb40f867a60044a67",
+  "parcel_capacity_shard_fast_v1.py": "936d6eaa356aeb95559847eff8c0aa22339e34894b9c9dd359817e6261617971",
+  "parcel_kernel_profile_fast_v3.py": "cc9b93050dc65b40064e3e864266a62bcdc624f085c80333cca4d37b181b1057"
+}
