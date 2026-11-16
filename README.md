@@ -40,7 +40,7 @@ tmux new-session -d -s parcel_train \
   'cd "'"$PWD"'" && .local_isaaclab3/venv/bin/python scripts/train.py --gpus 0,1,2,3 --mailer-envs 4096 --horizon 32 --output runs/sgs32k'
 ```
 
-This gives 32,768 environments/GPU = 16,384 box + 4×4,096 mailer environments, total 131,072. One shared PPO actor per GPU, synchronized across all GPUs. **This is the tested maximum capacity setting, not a guarantee of optimal throughput.** Original end-to-end production updates took **4,419–4,456 seconds per 32-step rollout/update**. A policy step contains ten .002s native physics calls; large contact-rich deformable batches dominate runtime. `evidence/` contains measurements and exact scope. Use `--mailer-envs N` to scale both kinds proportionally (8N total/GPU) while keeping physical fidelity unchanged.
+This gives 32,768 environments/GPU = 16,384 box + 4×4,096 mailer environments, total 131,072. One shared PPO actor per GPU, synchronized across all GPUs. **This is the tested maximum capacity setting, not a guarantee of optimal throughput.** Original end-to-end production updates took **4,419–4,456 seconds per 32-step rollout/update**. Those original50Hz measurements used ten .002s native physics calls/action; the current10Hz controller uses fifty. Large contact-rich deformable batches dominate runtime. `evidence/` contains measurements and exact scope. Use `--mailer-envs N` to scale both kinds proportionally (8N total/GPU) while keeping physical fidelity unchanged.
 
 ### Resume and monitoring
 
